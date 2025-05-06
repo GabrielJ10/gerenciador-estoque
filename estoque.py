@@ -19,3 +19,9 @@ def remover_produto(nome_alvo: str) -> bool:
             estoque.pop(i)
             return True
     return False
+
+for indice, produto in enumerate(estoque):
+    nome_produto = produto.nome  # variável explicativa
+    if nome_produto == nome_alvo:
+        estoque.pop(indice)
+        return True
