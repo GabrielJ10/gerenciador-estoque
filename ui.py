@@ -1,9 +1,16 @@
 from estoque import Produto
 
 def ler_dados_produto() -> Produto:
-    nome = input("Nome: ")
-    preco = float(input("Preço: "))
-    qtd = int(input("Qtd: "))
+    try:
+        nome = input("Nome: ").strip()
+        preco = float(input("Preço: "))
+        qtd = int(input("Qtd: "))
+    except ValueError as e:
+        print("Valor inválido. Reinicie a operação.")
+        raise
+
+    if preco < 0 or qtd < 0:
+        raise ValueError("Preço e quantidade não podem ser negativos.")
     return Produto(nome, preco, qtd)
 
 def adicionar_produto_ui():
