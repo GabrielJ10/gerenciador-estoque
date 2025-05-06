@@ -27,3 +27,11 @@ def listar_estoque():
     from estoque import estoque
     for produto in estoque:
         print(produto)  # usa __str__ de Produto
+
+ def mostrar_menu() -> str:
+    print("\n=== Gerenciador de Estoque ===")
+    print("1 - Adicionar produto")
+    print("2 - Remover produto")
+    print("3 - Listar estoque")
+    print("4 - Sair")
+    return input("Escolha uma opção: ").strip()
