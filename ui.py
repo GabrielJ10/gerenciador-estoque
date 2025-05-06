@@ -10,3 +10,8 @@ def adicionar_produto_ui():
     prod = ler_dados_produto()
     adicionar_produto(prod)
     print("Produto adicionado com sucesso!")
+
+def remover_produto_ui():
+    nome_alvo = input("Nome do produto a remover: ")
+    sucesso = remover_produto(nome_alvo)
+    print("Removido!" if sucesso else "Produto não encontrado")

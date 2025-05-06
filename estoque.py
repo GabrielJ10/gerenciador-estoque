@@ -12,3 +12,10 @@ estoque: list[Produto] = []
 
 def adicionar_produto(prod: Produto):
     estoque.append(prod)
+
+def remover_produto(nome_alvo: str) -> bool:
+    for i, prod in enumerate(estoque):
+        if prod.nome == nome_alvo:
+            estoque.pop(i)
+            return True
+    return False
