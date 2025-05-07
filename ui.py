@@ -31,7 +31,7 @@ def listar_estoque_ui() -> None:
         for produto in estoque:
             print(produto)
 
- def mostrar_menu() -> str:
+def mostrar_menu() -> str:
     print("\n=== Gerenciador de Estoque ===")
     print("1 - Adicionar produto")
     print("2 - Remover produto")
