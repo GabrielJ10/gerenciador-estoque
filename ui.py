@@ -1,4 +1,4 @@
-from estoque import Produto
+from estoque import Produto, adicionar_produto, remover_produto, estoque
 
 def ler_dados_produto() -> Produto:
     try:
@@ -23,10 +23,13 @@ def remover_produto_ui():
     sucesso = remover_produto(nome_alvo)
     print("Removido!" if sucesso else "Produto não encontrado")
 
-def listar_estoque():
-    from estoque import estoque
-    for produto in estoque:
-        print(produto)  # usa __str__ de Produto
+def listar_estoque_ui() -> None:
+    if not estoque:
+        print("Estoque vazio.")
+    else:
+        print("\n-- Lista de Produtos --")
+        for produto in estoque:
+            print(produto)
 
  def mostrar_menu() -> str:
     print("\n=== Gerenciador de Estoque ===")
