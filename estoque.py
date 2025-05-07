@@ -14,8 +14,8 @@ def adicionar_produto(prod: Produto):
     estoque.append(prod)
 
 def remover_produto(nome_alvo: str) -> bool:
-for indice, produto in enumerate(estoque):
-    nome_produto = produto.nome  # variável explicativa
+    for indice, produto in enumerate(estoque):
+        nome_produto = produto.nome  # variável explicativa
     if nome_produto == nome_alvo:
         estoque.pop(indice)
         return True
